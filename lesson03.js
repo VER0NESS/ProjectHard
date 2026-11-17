@@ -29,4 +29,18 @@ function langArr(){
     const l=prompt(("Choose language(en/ru):"))
     console.log(String(all[all.indexOf(l)+1]))
 }
-langIf()
+
+function name(){
+    const namePerson = prompt()
+    if (namePerson == "Артём"){
+        console.log("директор")
+    }
+    else if (namePerson == "Александр") {
+        console.log("преподаватель")
+    }
+    else{
+        console.log("студент")
+    }
+}
+
+name()
