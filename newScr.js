@@ -1,16 +1,6 @@
-let num = 266219;
-numlist=[]
-for (const item of String(num).split("")){
-    if (!numlist.includes(Number(item))){
-        numlist.push(Number(item))
+arr=["100000","22222","45436","15666","1456","66664","150000000000000000000000"]
+for(let i=0;i<arr.length;i++){
+    if(arr[i][0]==="2" || arr[i][0]==="4"){
+        console.log(arr[i])
     }
 }
-let res=1
-for (const item of numlist){
-    res=res*item
-}
-console.log("result is ",String(res**3).slice(0,2))
-// let result = sum ** 3;
-// let resultSlice = String(result).slice(0, 2);
-
-// console.log(resultSlice);
