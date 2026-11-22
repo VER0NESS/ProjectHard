@@ -1,21 +1,23 @@
-'use strict'
-let arr=["100000","22222","45436","15666","1456","66664","150000000000000000000000"]
-for(let i=0;i<arr.length;i++){
-    if(arr[i][0]==="2" || arr[i][0]==="4"){
-        console.log(arr[i])
+"use strict"
+const week = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fr", "Sat"]
+const todayIndex = new Date().getDay() //0-6
+for (let i = 0; i < week.length; i++) {
+    const isWeekend = i === 0 || i === 6
+    const isToday = i === todayIndex
+    if (isWeekend && isToday) {
+        document.write(`<b><i>${week[i]}</i></b><br>`)
+    } else if (isWeekend) {
+        document.write(`<b>${week[i]}</b><br>`)
+    } else if (isToday) {
+        document.write(`<i>${week[i]}</i><br>`)
+    } else {
+        document.write(`${week[i]}<br>`)
     }
 }
-const isPrime=function(n){
-    let divs=0
-    for(let i=1;i<=n;i++){
-        if(n%i===0){
-            divs++
-        }
-    }
-    if(divs===2){
-        console.log("делители этого числа:",1,"и",n)
-    }
-}
-for(let i=1;i<=100;i++){
-    isPrime(i)
-}
+
+
+const now = new Date();        
+// Создаём объект с текущей датой и временем
+const dayNumber = now.getDay(); 
+// Получаем число от 0 до 6 (например, сегодня в воскресенье вернёт 0)
+console.log(dayNumber); // 0
